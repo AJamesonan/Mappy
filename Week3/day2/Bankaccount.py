@@ -53,4 +53,5 @@ user1.display_account_info()
 
 Bob = User('Bob',"gmail.com")
 
-Bob.make_deposit(80).display_users_account_info()
+Bob.make_deposit(80)
+Bob.display_users_account_info()

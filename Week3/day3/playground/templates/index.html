@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', flilename='//style.css')}}">
+
     <title>Playground</title>
 <style>
     .headcontainer{
@@ -14,11 +15,13 @@
 .main{
     display: flex;
     justify-content: center;
+    justify-content: space-around;
     /* position: relative;
     top: 200px; */
 }
 .box{
     display: flex;
+    margin; 15px;
     height: 70px;
     width: 70px;
     background-color: {{color}};

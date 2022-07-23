@@ -1,0 +1,25 @@
+.headwrap{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: blueviolet;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.row_wrap{
+    display: flex;
+    justify-content: center;
+}
+.tiles1{
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+}
+.tiles2{
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+} 

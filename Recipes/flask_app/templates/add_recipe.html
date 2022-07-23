@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Recipe</title>
+</head>
+<body>
+    <h1>Add New Recipe!</h1>
+    <form action="/add/recipe" method="POST">
+        <div>
+        Name: <input type="textbox" name="name"><br>
+        Description: <input type="textbox" name="description"><br>
+        Instructions: <input type="textbox" name="instructions">
+    </div>
+    <div>
+    Date Cooked/ Made: <input type="date" name="date_cooked"><br>
+    under 30 minutes?<br>
+    <input type="radio" name="under_30" value ="Yes" checked >Yes
+    <input type="radio" name="under_30" value="No">No
+        <input type="submit" value="Submit">
+    </div>
+    </form>
+</body>
+</html>
