@@ -1,6 +1,6 @@
 from flask import flash
 from flask_app import app
-from flask_app.config.mysqlconnection import MySQLConnection, connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 import re	
 from flask_bcrypt import Bcrypt 
 bcrypt = Bcrypt(app) 

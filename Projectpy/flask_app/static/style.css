@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', monospace;
+}
+
+body{
+    height: 1000px;
+    background-color: lightgray;
+}
+.mainBody{
+    height: 100%;
+    width: 100%
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 70px;
+    margin-bottom: 50px;
+    padding:50px 0px 0px 0px;
+}
+
+
+.map-calendar-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.map{
+    flex-grow: 0;
+    flex-shrink: 0;
+    
+}
+
+.calendar{
+    flex-grow: 0;
+    flex-shrink: 0;
+    
+}
+
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+.table{
+    height: 50%;
+    width: 500px;
+    margin: 0px 10px 10px 50px;
+}
+
+.tableBlock{
+    display: flex
+}
+
+.locationInput{
+    display: flex;
+    position: relative;
+    background-color: lightblue;
+    width: 300px;
+    
+    justify-content: end;
+    margin-left: 50px;
+}

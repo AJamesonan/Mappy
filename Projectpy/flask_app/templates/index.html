@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+<title>Simple Map</title>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+	<div class="mainBody">
+		<div class="padding-left"></div>
+		<div class="subBody">
+			<div class="header">
+				<h1>Dash Mash</h1>
+			</div>
+			<div class="wrap">
+				<div class="tableBlock">
+					<table class="table table-dark table-hover">
+						<tr>
+							<th>Destination</th>
+							<th>Travel time</th>
+						</tr>
+						{% for destination, duration in travel_time.items() %}
+							<tr>
+								<td>{{destination}}</td>
+								<td>{{duration}}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+				<div class="map-calendar-wrap">
+					<div class="map">
+						<iframe width="700px" height="500px" style="border: 0" loading="lazy"
+							allowfullscreen
+							src="https://www.google.com/maps/embed/v1/directions?origin=place_id:{{session['origin']}}&destination=place_id:{{session['destination']}}&key=AIzaSyDEwqVNbIFUcWH6qJRTBCXVmgqyjv6kid8"></iframe>
+					</div>
+					<div class="calendar">
+						<iframe
+							src="https://calendar.google.com/calendar/embed?src=ajamesonan%40gmail.com&ctz=America%2FNew_York"
+							style="border: 0" width="600" height="600" frameborder="0"
+							scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="locationInput">
+			<form action="/set/routemap" method="POST"
+				modelAttribute="locationInput">
+				<label>From:</label> <select name="origin">
+					{%for origin in places%}
+						<option>{{origin.name}}</option>
+					{% endfor %}
+				</select><br> <label>Destination:</label> <select name="destination">
+					{%for destination in places%}
+						<option>{{destination.name}}</option>
+					{% endfor %}
+				</select><br> <input type="submit" value="create">
+			</form>
+			<div class="add">
+				<a href="/location/new"> Add your locations</a>
+			</div>
+		</div>
+	</div>
+	<div class="padding-right"></div>
+	</div>
+</body>
+</html>

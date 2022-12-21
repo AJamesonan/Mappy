@@ -1,5 +1,11 @@
 from flask import render_template,redirect,request,session,flash
 from flask_app import app
+from flask import jsonify
+
+@app.route('/get_data')
+def get_data():
+    # jsonify will serialize data into JSON format.
+    return jsonify(message="Hello World")
 
 from flask_app.models.user import User
 
