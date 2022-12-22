@@ -10,6 +10,8 @@ flask-bcrypt = "*"
 bcrypt = "*"
 python-dotenv = "*"
 requests = "*"
+gunicorn = "*"
+waitress = "*"
 
 [dev-packages]
 
