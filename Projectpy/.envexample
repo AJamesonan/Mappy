@@ -1,1 +1,7 @@
 REACT_APP_YOUTUBE_API_KEY=
+
+HOSTNAME=localhost
+PORT=3306
+USERNAME=root
+PASSWORD=root
+DATABASE=map_dashboard

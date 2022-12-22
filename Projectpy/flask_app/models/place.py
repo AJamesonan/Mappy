@@ -10,7 +10,7 @@ import os
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
-db='map_dashboard'
+db=os.environ.get('DATABASE')
 
 class Place:
     def __init__(self,data):

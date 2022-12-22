@@ -12,6 +12,7 @@ python-dotenv = "*"
 requests = "*"
 gunicorn = "*"
 waitress = "*"
+cryptography = "*"
 
 [dev-packages]
 

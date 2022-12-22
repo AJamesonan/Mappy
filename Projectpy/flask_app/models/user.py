@@ -1,5 +1,4 @@
 from flask_app.config.mysqlconnection import MySQLConnection, connectToMySQL
-import requests
 import os
 
 from flask import flash
@@ -8,7 +7,7 @@ from flask_app import app
 import re	
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
-db='map_dashboard'
+db=os.environ.get('DATABASE')
 
 class User:
     def __init__(self, data):
