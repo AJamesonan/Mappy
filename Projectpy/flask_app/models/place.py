@@ -135,4 +135,4 @@ class Place:
             print(travel_time)
             return travel_time
         else:
-            return 'no origin set'
+            return {}
