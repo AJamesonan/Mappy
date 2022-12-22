@@ -8,6 +8,7 @@ class MySQLConnection:
     def __init__(self, db):
         # change the user and password as needed
         connection = pymysql.connect(host=os.environ.get('HOSTNAME'),
+                                    port=int(os.environ.get('PORT')),
                                     user=os.environ.get('USERNAME'),
                                     password=os.environ.get('PASSWORD'),
                                     db=db,
