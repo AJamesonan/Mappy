@@ -1,9 +1,12 @@
-from flask import render_template,redirect,request,session,flash
-from flask_app import app
+import os
+from flask import render_template,redirect,request,session,flash, Flask 
 import re	
-from flask_app.models.user import User
-from flask_app.models.place import Place
+from .models.user import User
+from .models.place import Place
 from flask_bcrypt import Bcrypt
+
+app = Flask(__name__)
+app.secret_key = "secrets"
 bcrypt = Bcrypt(app)
 # from flask_app.models.model import Class
 
@@ -123,3 +126,4 @@ def create_place():
         print('validation failed')
         flash('validation failed')
         return redirect('/location/new')
+
