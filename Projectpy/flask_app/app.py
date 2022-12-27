@@ -14,8 +14,12 @@ bcrypt = Bcrypt(app)
 def login_page():
     return render_template('login.html')
 
+@app.route('/register')
+def registration():
+    return render_template('register.html')
 
-@app.route('/register', methods=['POST'])
+
+@app.route('/register/user', methods=['POST'])
 def register():
     dbdata = {
         'email': request.form['email']
