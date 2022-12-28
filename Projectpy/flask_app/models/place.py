@@ -38,8 +38,10 @@ class Place:
             is_valid = False
         if place['street_address'] == "":
             flash('please add address of place')
+            is_valid = False
         if place['zip'] == "":
             flash('please add zip of place')
+            is_valid = False
         return is_valid
         
 

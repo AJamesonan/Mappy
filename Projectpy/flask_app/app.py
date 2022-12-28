@@ -80,11 +80,19 @@ def user_places():
     if 'user_id' not in session:
         flash('log in to view page')
         return redirect('/')
+
         
     list_places = Place.get_places()
     travel_time = Place.get_travel_times()
     print('post travel', travel_time)
     return render_template('index.html', places = list_places,travel_time= travel_time)
+
+@app.route('/calendar')
+def calendar_view():
+    if 'user_id' not in session:
+        flash('log in to view page')
+        return redirect('/')
+    return render_template('calendar.html')
 
 @app.route('/set/routemap/', methods = ['POST'])
 def set_map():
