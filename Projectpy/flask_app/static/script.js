@@ -1,6 +1,6 @@
 async function getrouteData() {
     // The await keyword lets js know that it needs to wait until it gets a response back to continue.
-    var response = await fetch("https://maps.googleapis.com/maps/api/distancematrix/json?origins=5905%20Muddy%20Creek%20Road,%20Cincinnati,%20OH%2045233&destinations=7544%20Burlington%20Pike,%20Florence,%20KY%2041042&units=imperial&key=AIzaSyC81PU439FQUFkQ1OItr9xnXyqXaVV_dxs");
+    var response = await fetch("https://maps.googleapis.com/maps/api/distancematrix/json?origins=5905%20Muddy%20Creek%20Road,%20Cincinnati,%20OH%2045233&destinations=7544%20Burlington%20Pike,%20Florence,%20KY%2041042&units=imperial&key=API_KEY");
     // We then need to convert the data into JSON format.
     var coderData = await response.json();
     return coderData;
